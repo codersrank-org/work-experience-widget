@@ -1,0 +1,28 @@
+{
+  "name": "@codersrank/work-experience",
+  "version": "0.9.3",
+  "description": "Codersrank Work Experience Widget",
+  "main": "cjs/codersrank-work-experience.js",
+  "module": "esm/codersrank-work-experience.js",
+  "jsnext:main": "esm/codersrank-work-experience.js",
+  "browser": "codersrank-work-experience.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codersrank-org/work-experience-widget.git"
+  },
+  "author": "CodersRank Ltd.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codersrank-org/work-experience-widget/issues"
+  },
+  "homepage": "https://github.com/codersrank-org/work-experience-widget#readme",
+  "keywords": [
+    "codersrank",
+    "work",
+    "experience",
+    "jobs",
+    "profile",
+    "cv",
+    "web component"
+  ]
+}
