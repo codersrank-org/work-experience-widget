@@ -61,45 +61,54 @@ It is possible to customize widget colors with CSS Custom Properties (CSS Variab
 
 There are following CSS Custom Properties are available:
 
-| Property                     | Value                  |
-| ---------------------------- | ---------------------- |
-| --preloader-color            | #72a0a8                |
-| --logo-size                  | 48px                   |
-| --logo-margin                | 16px                   |
-| --nested-circle-size         | 12px                   |
-| --nested-circle-border-width | 2px                    |
-| --nested-circle-opacity      | 0.25                   |
-| --nested-line-opacity        | 0.25                   |
-| --nested-line-width          | 2px                    |
-| --company-font-size          | 1.15em                 |
-| --company-font-weight        | bold                   |
-| --company-text-color         | inherit                |
-| --company-opacity            | 1                      |
-| --title-font-size            | inherit                |
-| --title-font-weight          | bold                   |
-| --title-text-color           | inherit                |
-| --title-opacity              | 1                      |
-| --location-text-color        | inherit                |
-| --location-opacity           | 0.55                   |
-| --location-font-size         | inherit                |
-| --location-font-weight       | inherit                |
-| --date-text-color            | inherit                |
-| --date-opacity               | 0.55                   |
-| --date-font-size             | inherit                |
-| --date-font-weight           | inherit                |
-| --description-font-size      | inherit                |
-| --description-font-weight    | inherit                |
-| --description-text-color     | inherit                |
-| --description-opacity        | 1                      |
-| --tag-border                 | none                   |
-| --tag-star-color             | #ff9900                |
-| --tag-bg-color               | rgba(0, 0, 100, 0.075) |
-| --tag-font-size              | 0.85em                 |
-| --tag-font-weight            | bold                   |
-| --tag-padding                | 0.35em 0.57em          |
-| --tag-margin                 | 0.28em                 |
-| --tag-border-radius          | 4px                    |
-| --tag-text-color             | inherit                |
+| Property                       | Value                    |
+| ------------------------------ | ------------------------ |
+| `--preloader-color`            | `#72a0a8`                |
+| `--logo-size`                  | `48px`                   |
+| `--logo-margin`                | `16px`                   |
+| `--nested-circle-size`         | `12px`                   |
+| `--nested-circle-border-width` | `2px`                    |
+| `--nested-circle-opacity`      | `0.25`                   |
+| `--nested-line-opacity`        | `0.25`                   |
+| `--nested-line-width`          | `2px`                    |
+| `--company-font-size`          | `1.15em`                 |
+| `--company-font-weight`        | `bold`                   |
+| `--company-text-color`         | `inherit`                |
+| `--company-opacity`            | `1`                      |
+| `--title-font-size`            | `inherit`                |
+| `--title-font-weight`          | `bold`                   |
+| `--title-text-color`           | `inherit`                |
+| `--title-opacity`              | `1`                      |
+| `--location-text-color`        | `inherit`                |
+| `--location-opacity`           | `0.55`                   |
+| `--location-font-size`         | `inherit`                |
+| `--location-font-weight`       | `inherit`                |
+| `--date-text-color`            | `inherit`                |
+| `--date-opacity`               | `0.55`                   |
+| `--date-font-size`             | `inherit`                |
+| `--date-font-weight`           | `inherit`                |
+| `--description-font-size`      | `inherit`                |
+| `--description-font-weight`    | `inherit`                |
+| `--description-text-color`     | `inherit`                |
+| `--description-opacity`        | `1`                      |
+| `--tag-border`                 | `none`                   |
+| `--tag-star-color`             | `#ff9900`                |
+| `--tag-bg-color`               | `rgba(0, 0, 100, 0.075)` |
+| `--tag-font-size`              | `0.85em`                 |
+| `--tag-font-weight`            | `bold`                   |
+| `--tag-padding`                | `0.35em 0.57em`          |
+| `--tag-margin`                 | `0.28em`                 |
+| `--tag-border-radius`          | `4px`                    |
+| `--tag-text-color`             | `inherit`                |
+
+For example, to change work experience title color to `purple` and font-size to `20px`, add this to CSS stylesheet:
+
+```css
+codersrank-work-experience {
+  --title-text-color: purple;
+  --title-font-size: 20px;
+}
+```
 
 ## Contribution
 
