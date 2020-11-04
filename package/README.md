@@ -44,10 +44,12 @@ As it is a web component the usage is pretty simple, just add widget HTML tag wi
 
 Widget supports following properties as HTML element attributes:
 
-| Name       | Type      | Default | Description                                       |
-| ---------- | --------- | ------- | ------------------------------------------------- |
-| `username` | `string`  |         | Your [CodersRank](https://codersrank.io) username |
-| `logos`    | `boolean` | `false` | Enables company logos                             |
+| Name        | Type      | Default | Description                                                                               |
+| ----------- | --------- | ------- | ----------------------------------------------------------------------------------------- |
+| `username`  | `string`  |         | Your [CodersRank](https://codersrank.io) username                                         |
+| `logos`     | `boolean` | `false` | Enables company logos                                                                     |
+| `max-items` | `number`  |         | Limit number of work experiences to display                                               |
+| `grid`      | `boolean` | `false` | Enables grid layout. Number of columns is configurable with `--grid-columns` CSS variable |
 
 For example:
 
@@ -64,6 +66,12 @@ There are following CSS Custom Properties are available:
 | Property                       | Value                    |
 | ------------------------------ | ------------------------ |
 | `--preloader-color`            | `#72a0a8`                |
+| `--item-spacing`               | `2em`                    |
+| `--item-border-radius`         | `0px`                    |
+| `--item-border`                | `none`                   |
+| `--item-padding`               | `0px`                    |
+| `--item-bg-color`              | `0px`                    |
+| `--grid-columns`               | `1`                      |
 | `--logo-size`                  | `48px`                   |
 | `--logo-margin`                | `16px`                   |
 | `--nested-circle-size`         | `12px`                   |
