@@ -1,7 +1,10 @@
 import { differenceInMonths } from './difference-in-months';
 
-export const formatData = (profile = {}) => {
-  const workExperience = profile.workExperience || [];
+export const formatData = (profile = {}, maxItems) => {
+  let workExperience = profile.workExperience || [];
+  if (maxItems) {
+    workExperience = workExperience.slice(0, maxItems);
+  }
   let items = [];
   const companyMapping = {};
   let originalIndex = 0;

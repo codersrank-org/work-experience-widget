@@ -1,7 +1,7 @@
 import { companyLogo } from './company-logo';
 import { differenceInMonths } from './difference-in-months';
 
-export const render = ({ data: workExperience, logos, preloader } = {}) => {
+export const render = ({ data: workExperience, logos, grid, preloader } = {}) => {
   const workExperienceLocation = (we) => {
     const location = we.titles[0].location;
     if (location === 'Remote, Earth') return 'Remote';
@@ -58,13 +58,13 @@ export const render = ({ data: workExperience, logos, preloader } = {}) => {
 
   // prettier-ignore
   return /* html */ `
-    <div class="codersrank-work-experience ${!logos ? 'codersrank-work-experience-no-logos' : ''} ${preloader ? 'codersrank-work-experience-loading' : ''}">
+    <div class="codersrank-work-experience ${grid ? 'codersrank-work-experience-grid' : ''} ${!logos ? 'codersrank-work-experience-no-logos' : ''} ${preloader ? 'codersrank-work-experience-loading' : ''}">
       ${preloader ? /* html */ `
       <div class="codersrank-work-experience-preloader"></div>
       ` : ''}
       <ul>
         ${workExperience.map((we) => /* html */`
-        <li class="codersrank-work-experience-item-wrap">
+        <li class="codersrank-work-experience-item">
           ${logos ? /* html */`
           <div class="codersrank-work-experience-logo">
             ${companyLogo(we.companyName, we.companyLogoUrl)}
@@ -87,7 +87,7 @@ export const render = ({ data: workExperience, logos, preloader } = {}) => {
             <div class="codersrank-work-experience-items">
               ${we.titles.map((title) => /* html */`
               <div
-                class="codersrank-work-experience-item ${we.titles.length > 1 ? 'codersrank-work-experience-item-nested' : ''}"
+                class="codersrank-work-experience-position ${we.titles.length > 1 ? 'codersrank-work-experience-position-nested' : ''}"
               >
                 <div class="codersrank-work-experience-title">
                   ${ title.title }

@@ -24,6 +24,16 @@
       margin: 40px auto;
     }
 
+    .grid-widget {
+      margin: 1em 0;
+      --grid-columns: 2;
+      --item-spacing: 1em;
+      --item-bg-color: rgba(0, 0, 0, 0.05);
+      --item-padding: 1em;
+      --item-border-radius: 10px;
+      --description-font-size: 0px;
+    }
+
     .dark-layout {
       background: #121212;
       padding: 40px;
@@ -42,9 +52,12 @@
     <h1>CodersRank Work Experience Widget</h1>
     <codersrank-work-experience username="peti2001" logos></codersrank-work-experience>
 
+    <h2>Grid</h2>
+    <codersrank-work-experience class="grid-widget" grid username="peti2001" max-items="2" logos>
+    </codersrank-work-experience>
     <div class="dark-layout">
       <h2>On dark layout</h2>
-      <codersrank-work-experience class="codersrank-work-experience-dark" username="peti2001" logos>
+      <codersrank-work-experience username="peti2001" logos>
     </div>
   </main>
   <script src="codersrank-work-experience.js"></script>
