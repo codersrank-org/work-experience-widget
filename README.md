@@ -1,5 +1,7 @@
 # Codersrank Work Experience Widget
 
+<!-- DOCS_START -->
+
 Codersrank Work Experience Widget is a web component that allows you easily integrate work experience information from your [CodersRank](https://codersrank.io) profile to your personal website:
 
 <img src="preview.png" />
