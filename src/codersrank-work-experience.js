@@ -78,12 +78,21 @@ class CodersrankWorkExperience extends HTMLElement {
     this.setAttribute('max-items', value);
   }
 
+  get branding() {
+    return this.getAttribute('branding') !== 'false';
+  }
+
+  set branding(value) {
+    this.setAttribute('branding', value);
+  }
+
   render() {
-    const { username, mounted, state, shadowEl, data, logos, grid } = this;
+    const { username, mounted, state, shadowEl, data, logos, grid, branding } = this;
     const ctx = {
       data,
       logos,
       grid,
+      branding,
     };
 
     if (!username || !mounted) return;

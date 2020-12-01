@@ -1,7 +1,14 @@
+import { codersrRankLogo } from './codersrank-logo';
 import { companyLogo } from './company-logo';
 import { differenceInMonths } from './difference-in-months';
 
-export const render = ({ data: workExperience, logos, grid, preloader } = {}) => {
+export const render = ({
+  data: workExperience,
+  logos,
+  grid,
+  preloader,
+  branding,
+} = {}) => {
   const workExperienceLocation = (we) => {
     const location = we.titles[0].location;
     if (location === 'Remote, Earth') return 'Remote';
@@ -122,6 +129,14 @@ export const render = ({ data: workExperience, logos, grid, preloader } = {}) =>
         </li>
         `).join('')}
       </ul>
+      ${branding ? /* html */`
+      <div class="codersrank-work-experience-branding">
+        <a href="https://codersrank.io" target="_blank" rel="noopener noreferrer">
+          <span>Powered by </span>
+          ${codersrRankLogo}
+        </a>
+      </div>
+      ` : ''}
     </div>
   `;
 };

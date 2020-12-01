@@ -110,6 +110,7 @@ There are following CSS Custom Properties are available:
 | `--tag-margin`                 | `0.28em`                 |
 | `--tag-border-radius`          | `4px`                    |
 | `--tag-text-color`             | `inherit`                |
+| `--branding-text-color`        | `inherit`                |
 
 For example, to change work experience title color to `purple` and font-size to `20px`, add this to CSS stylesheet:
 
