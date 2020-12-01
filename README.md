@@ -52,6 +52,7 @@ Widget supports following properties as HTML element attributes:
 | `logos`     | `boolean` | `false` | Enables company logos                                                                     |
 | `max-items` | `number`  |         | Limit number of work experiences to display                                               |
 | `grid`      | `boolean` | `false` | Enables grid layout. Number of columns is configurable with `--grid-columns` CSS variable |
+| `branding`  | `boolean` | `true`  | Displays "Powered by CodersRank" link                                                     |
 
 For example:
 
