@@ -1,6 +1,6 @@
 {
   "name": "@codersrank/work-experience",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Codersrank Work Experience Widget",
   "main": "cjs/codersrank-work-experience.js",
   "module": "esm/codersrank-work-experience.js",
