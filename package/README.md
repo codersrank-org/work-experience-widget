@@ -52,6 +52,7 @@ Widget supports following properties as HTML element attributes:
 | `logos`     | `boolean` | `false` | Enables company logos                                                                     |
 | `max-items` | `number`  |         | Limit number of work experiences to display                                               |
 | `grid`      | `boolean` | `false` | Enables grid layout. Number of columns is configurable with `--grid-columns` CSS variable |
+| `branding`  | `boolean` | `true`  | Displays "Powered by CodersRank" link                                                     |
 
 For example:
 
@@ -120,6 +121,33 @@ codersrank-work-experience {
   --title-font-size: 20px;
 }
 ```
+
+## Use As Image
+
+It is also possible to insert Work Experience widget as an image. It is useful in places where you can't integrate web component, or for example on your GitHub profile README.md page.
+
+Image URL is the following:
+
+```
+https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=work-experience&username=YOUR_USERNAME
+```
+
+It accepts all widget attributes as query string parameters, plus one extra parameter:
+
+| Name    | Type     | Default | Description                                                                                                                                                                     |
+| ------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `width` | `number` | `800`   | Width of widget element (generated image). Note that generated image has @2x pixel density, so the PNG image will be actually generated in @2x size from the one specified here |
+| `style` | `string` |         | `style` attribute value (here you can specify all CSS variables)                                                                                                                |
+
+For example:
+
+```html
+<img
+  src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=education&username=YOUR_USERNAME&max-items=2&logos=true&style=--item-bg-color:%23f00;--item-border-radius:10px"
+/>
+```
+
+Note that you need to URL Encode some of the characters, for example `#` should be `%23` and `#ff0` color should be specified as `%23ff0` in query.
 
 ## Contribution
 
