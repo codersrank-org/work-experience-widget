@@ -9,6 +9,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    camelcase: ['off'],
     'import/prefer-default-export': ['off'],
     'import/no-extraneous-dependencies': ['off'],
     'object-curly-newline': ['off'],

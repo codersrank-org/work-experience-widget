@@ -11,7 +11,7 @@ export const render = ({
 } = {}) => {
   const workExperienceLocation = (we) => {
     const location = we.titles[0].location;
-    if (location === 'Remote, Earth') return 'Remote';
+    if (location === 'Remote, Earth' || we.is_remote) return 'Remote';
     return location || '';
   };
   const formatInterval = (months) => {
@@ -41,24 +41,24 @@ export const render = ({
     return formatter.format(new Date(date));
   };
 
-  const calculateMonths = (startDate, endDate, currentlyWorkingHere) => {
-    const end = currentlyWorkingHere ? new Date() : new Date(endDate);
+  const calculateMonths = (startDate, endDate, is_current) => {
+    const end = is_current ? new Date() : new Date(endDate);
     return differenceInMonths(new Date(startDate), end);
   };
 
   const dates = (item, showInterval = true) => {
-    const startDate = formatDate(item.startDate || item.dateFrom);
-    const endDate = item.currentlyWorkingHere
+    const startDate = formatDate(item.start_date || item.date_from);
+    const endDate = item.is_current
       ? 'Present'
-      : formatDate(item.endDate || item.dateTo);
+      : formatDate(item.end_date || item.date_to);
     if (!showInterval) {
       return `${startDate} - ${endDate}`;
     }
     return `${startDate} - ${endDate} (${formatInterval(
       calculateMonths(
-        item.startDate || item.dateFrom,
-        item.endDate || item.dateTo,
-        item.currentlyWorkingHere,
+        item.start_date || item.date_from,
+        item.end_date || item.date_to,
+        item.is_current,
       ),
     )})`;
   };
@@ -74,12 +74,12 @@ export const render = ({
         <li class="codersrank-work-experience-item">
           ${logos ? /* html */`
           <div class="codersrank-work-experience-logo">
-            ${companyLogo(we.companyName, we.companyLogoUrl)}
+            ${companyLogo(we.company, we.company_logo)}
           </div>
           ` : ''}
           <div class="codersrank-work-experience-content-wrap">
             <div class="codersrank-work-experience-company">
-              ${ we.companyName }
+              ${ we.company }
             </div>
             <div class="codersrank-work-experience-date">
               ${ we.titles.length > 1 ? formatInterval(we.totalMonths) : dates(we.titles[0]) }
@@ -110,13 +110,13 @@ export const render = ({
                 <div class="codersrank-work-experience-description">${ title.description }</div>
                 ` : ''}
 
-                ${title.highlightedTechnologies || title.otherTechnologies ? /* html */`
+                ${title.highlighted_technologies || title.other_technologies ? /* html */`
                   <div class="codersrank-work-experience-tags">
-                    ${title.highlightedTechnologies.map((tech) => /* html */`
+                    ${title.highlighted_technologies.map((tech) => /* html */`
                       <span class="codersrank-work-experience-tag"><span class="codersrank-work-experience-tag-star">★</span>${tech}</span>
                     `).join('')}
 
-                    ${title.otherTechnologies.map((tech) => /* html */`
+                    ${title.other_technologies.map((tech) => /* html */`
                       <span class="codersrank-work-experience-tag">${tech}</span>
                     `).join('')}
                   </div>

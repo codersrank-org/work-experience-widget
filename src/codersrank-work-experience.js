@@ -119,8 +119,8 @@ class CodersrankWorkExperience extends HTMLElement {
     this.state = STATE_LOADING;
     this.render();
     fetchData(username)
-      .then((profile) => {
-        this.data = formatData(profile, this.maxItems);
+      .then((workExperiences) => {
+        this.data = formatData(workExperiences, this.maxItems);
         this.state = STATE_SUCCESS;
         this.render();
       })
