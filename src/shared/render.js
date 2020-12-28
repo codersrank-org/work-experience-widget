@@ -1,6 +1,7 @@
-import { codersrRankLogo } from './codersrank-logo';
+import { codersRankLogo } from './codersrank-logo';
 import { companyLogo } from './company-logo';
 import { differenceInMonths } from './difference-in-months';
+import { sanitizeDescription } from './sanitize-description';
 
 export const render = ({
   data: workExperience,
@@ -107,7 +108,7 @@ export const render = ({
                 ` : ''}
 
                 ${title.description ? /* html */`
-                <div class="codersrank-work-experience-description">${ title.description }</div>
+                <div class="codersrank-work-experience-description">${ sanitizeDescription(title.description) }</div>
                 ` : ''}
 
                 ${title.highlighted_technologies || title.other_technologies ? /* html */`
@@ -133,7 +134,7 @@ export const render = ({
       <div class="codersrank-work-experience-branding">
         <a href="https://codersrank.io" target="_blank" rel="noopener noreferrer">
           <span>Powered by </span>
-          ${codersrRankLogo}
+          ${codersRankLogo}
         </a>
       </div>
       ` : ''}
