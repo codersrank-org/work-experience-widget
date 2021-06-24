@@ -143,7 +143,7 @@ For example:
 
 ```html
 <img
-  src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=education&username=YOUR_USERNAME&max-items=2&logos=true&style=--item-bg-color:%23f00;--item-border-radius:10px"
+  src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=work-experience&username=YOUR_USERNAME&max-items=2&logos=true&style=--item-bg-color:%23f00;--item-border-radius:10px"
 />
 ```
 
